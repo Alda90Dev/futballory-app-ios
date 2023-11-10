@@ -13,6 +13,8 @@ class NetworkManager {
     private let config: URLSessionConfiguration
     private let session: URLSession
     
+    public static var token: String?
+    
     private init() {
         config = URLSessionConfiguration.default
         session = URLSession(configuration: config)

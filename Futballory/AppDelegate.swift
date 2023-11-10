@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         window = UIWindow(frame: UIScreen.main.bounds)
-        let viewController = MainTabBarViewController()
+        let viewController = SplashRouter.createSplashModule()
         window?.rootViewController = viewController
         window?.makeKeyAndVisible()
         
@@ -25,3 +25,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 }
 
+extension AppDelegate {
+    
+    func createAppMainTabBar(success: @escaping () -> ()) {
+        let viewController = MainTabBarViewController()
+        window?.rootViewController = viewController
+        window?.makeKeyAndVisible()
+        success()
+    }
+}

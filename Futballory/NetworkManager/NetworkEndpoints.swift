@@ -8,13 +8,13 @@
 import Foundation
 
 enum NetworkEndpoints {
-    case getProducts
+    case getToken
     case getProduct(id: Int)
     
     var path: NetworkRouter {
         switch self {
-        case .getProducts:
-            return NetworkRouter(path: "/products", method: .get)
+        case .getToken:
+            return NetworkRouter(path: "login-app", method: .post)
         case .getProduct(let id):
             return NetworkRouter(path: "/products/\(id)", method: .get)
         }

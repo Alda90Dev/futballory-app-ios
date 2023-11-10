@@ -40,11 +40,11 @@ class MainView: UIViewController {
         return img
     }()
     
-    var characters = ["Link", "Zelda", "Ganondorf", "Midna","Link", "Zelda", "Ganondorf", "Midna","Link", "Zelda", "Ganondorf", "Midna",
-                      "Link", "Zelda", "Ganondorf", "Midna","Link", "Zelda", "Ganondorf", "Midna","Link", "Zelda", "Ganondorf", "Midna",
-                      "Link", "Zelda", "Ganondorf", "Midna","Link", "Zelda", "Ganondorf", "Midna","Link", "Zelda", "Ganondorf", "Midna",
-                      "Link", "Zelda", "Ganondorf", "Midna","Link", "Zelda", "Ganondorf", "Midna","Link", "Zelda", "Ganondorf", "Midna",
-                      "Link", "Zelda", "Ganondorf", "Midna","Link", "Zelda", "Ganondorf", "Midna","Link", "Zelda", "Ganondorf", "Midna"
+    var characters = ["Link1", "Zelda2", "Ganondorf3", "Midna4","Link5", "Zelda6", "Ganondorf7", "Midna8","Link9", "Zelda10", "Ganondorf11", "Midna12",
+                      "Link13", "Zelda14", "Ganondorf15", "Midna16","Link17", "Zelda18", "Ganondorf19", "Midna","Link", "Zelda", "Ganondorf", "Midna",
+                      "Link20", "Zelda21", "Ganondorf22", "Midna23","Link24", "Zelda25", "Ganondorf26", "Midna27","Link28", "Zelda29", "Ganondorf30", "Midna31",
+                      "Link32", "Zelda33", "Ganondorf34", "Midna35","Link36", "Zelda37", "Ganondorf38", "Midna","Link", "Zelda", "Ganondorf", "Midna",
+                      "Link39", "Zelda40", "Ganondorf41", "Midna42","Link43", "Zelda44", "Ganondorf45", "Midna46","Link47", "Zelda48", "Ganondorf49", "Midna50"
                         ]
     
     override func viewDidLoad() {

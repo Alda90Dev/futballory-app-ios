@@ -11,7 +11,7 @@ struct NetworkRouter {
     let path: String
     let method: HTTPMethod
     
-    private static let baseURLString = "https://fakestoreapi.com"
+    private static let baseURLString = "https://futballory.onrender.com/api/auth/"
     
     enum HTTPMethod {
         case get
@@ -25,6 +25,16 @@ struct NetworkRouter {
         }
     }
     
+    enum Headers {
+        case token
+        
+        var value: [String : String] {
+            switch self {
+            case .token: return ["x-token" : NetworkManager.token ?? ""]
+            }
+        }
+    }
+    
     func request() throws -> URLRequest {
         let urlString = "\(NetworkRouter.baseURLString)\(path)"
         
@@ -33,6 +43,7 @@ struct NetworkRouter {
         var request = URLRequest(url: url)
         request.httpMethod = method.value
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.allHTTPHeaderFields = Headers.token.value
         
         return request
     }

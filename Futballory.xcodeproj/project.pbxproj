@@ -17,8 +17,15 @@
 		B87E01B22AFB27E0003FD290 /* NetworkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87E01B12AFB27E0003FD290 /* NetworkRouter.swift */; };
 		B87E01B42AFB29FA003FD290 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87E01B32AFB29FA003FD290 /* NetworkManager.swift */; };
 		B87E01B62AFB2CC5003FD290 /* NetworkEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87E01B52AFB2CC5003FD290 /* NetworkEndpoints.swift */; };
+		B87E01B92AFC57AC003FD290 /* SplashRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87E01B82AFC57AC003FD290 /* SplashRouter.swift */; };
+		B87E01BB2AFC5A70003FD290 /* SplashPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87E01BA2AFC5A70003FD290 /* SplashPresenter.swift */; };
+		B87E01BD2AFC5C6E003FD290 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87E01BC2AFC5C6E003FD290 /* SplashView.swift */; };
+		B87E01BF2AFC6B7D003FD290 /* SplashInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87E01BE2AFC6B7D003FD290 /* SplashInteractor.swift */; };
+		B87E01C22AFC7193003FD290 /* TokenResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87E01C12AFC7193003FD290 /* TokenResponse.swift */; };
+		B87E01C52AFC74BD003FD290 /* SplashPresenterInputOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87E01C42AFC74BD003FD290 /* SplashPresenterInputOutput.swift */; };
+		B87E01C72AFDBDDE003FD290 /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87E01C62AFDBDDE003FD290 /* Content.swift */; };
+		B87E01CA2AFDBEDC003FD290 /* UIViewController+AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87E01C92AFDBEDC003FD290 /* UIViewController+AlertController.swift */; };
 		B89953A22AF32E6B009C9DF5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89953A12AF32E6B009C9DF5 /* AppDelegate.swift */; };
-		B89953A62AF32E6B009C9DF5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89953A52AF32E6B009C9DF5 /* ViewController.swift */; };
 		B89953AB2AF32E6C009C9DF5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B89953AA2AF32E6C009C9DF5 /* Assets.xcassets */; };
 		B89953AE2AF32E6C009C9DF5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B89953AC2AF32E6C009C9DF5 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -36,9 +43,16 @@
 		B87E01B12AFB27E0003FD290 /* NetworkRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRouter.swift; sourceTree = "<group>"; };
 		B87E01B32AFB29FA003FD290 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		B87E01B52AFB2CC5003FD290 /* NetworkEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkEndpoints.swift; sourceTree = "<group>"; };
+		B87E01B82AFC57AC003FD290 /* SplashRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashRouter.swift; sourceTree = "<group>"; };
+		B87E01BA2AFC5A70003FD290 /* SplashPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashPresenter.swift; sourceTree = "<group>"; };
+		B87E01BC2AFC5C6E003FD290 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		B87E01BE2AFC6B7D003FD290 /* SplashInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashInteractor.swift; sourceTree = "<group>"; };
+		B87E01C12AFC7193003FD290 /* TokenResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenResponse.swift; sourceTree = "<group>"; };
+		B87E01C42AFC74BD003FD290 /* SplashPresenterInputOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashPresenterInputOutput.swift; sourceTree = "<group>"; };
+		B87E01C62AFDBDDE003FD290 /* Content.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Content.swift; sourceTree = "<group>"; };
+		B87E01C92AFDBEDC003FD290 /* UIViewController+AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+AlertController.swift"; sourceTree = "<group>"; };
 		B899539E2AF32E6B009C9DF5 /* Futballory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Futballory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B89953A12AF32E6B009C9DF5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B89953A52AF32E6B009C9DF5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B89953AA2AF32E6C009C9DF5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B89953AD2AF32E6C009C9DF5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B89953AF2AF32E6C009C9DF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -75,6 +89,7 @@
 		B87E01A22AF60BB4003FD290 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				B87E01C82AFDBEA8003FD290 /* Extensions */,
 				B87E01A32AF60BC0003FD290 /* UI */,
 			);
 			path = Utils;
@@ -84,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				B87E01A42AF60BE0003FD290 /* ImageCatalog.swift */,
+				B87E01C62AFDBDDE003FD290 /* Content.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -109,6 +125,43 @@
 			path = NetworkManager;
 			sourceTree = "<group>";
 		};
+		B87E01B72AFC5792003FD290 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				B87E01C32AFC749B003FD290 /* Presenter */,
+				B87E01C02AFC7179003FD290 /* Models */,
+				B87E01B82AFC57AC003FD290 /* SplashRouter.swift */,
+				B87E01BC2AFC5C6E003FD290 /* SplashView.swift */,
+				B87E01BE2AFC6B7D003FD290 /* SplashInteractor.swift */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		B87E01C02AFC7179003FD290 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B87E01C12AFC7193003FD290 /* TokenResponse.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B87E01C32AFC749B003FD290 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				B87E01BA2AFC5A70003FD290 /* SplashPresenter.swift */,
+				B87E01C42AFC74BD003FD290 /* SplashPresenterInputOutput.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		B87E01C82AFDBEA8003FD290 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B87E01C92AFDBEDC003FD290 /* UIViewController+AlertController.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		B89953952AF32E6B009C9DF5 = {
 			isa = PBXGroup;
 			children = (
@@ -130,12 +183,12 @@
 		B89953A02AF32E6B009C9DF5 /* Futballory */ = {
 			isa = PBXGroup;
 			children = (
+				B87E01B72AFC5792003FD290 /* Splash */,
 				B87E01AE2AFB2610003FD290 /* NetworkManager */,
 				B87E01A62AF60CE5003FD290 /* Main */,
 				B87E01A22AF60BB4003FD290 /* Utils */,
 				B87E019F2AF600C5003FD290 /* MainTabBar */,
 				B89953A12AF32E6B009C9DF5 /* AppDelegate.swift */,
-				B89953A52AF32E6B009C9DF5 /* ViewController.swift */,
 				B89953AA2AF32E6C009C9DF5 /* Assets.xcassets */,
 				B89953AC2AF32E6C009C9DF5 /* LaunchScreen.storyboard */,
 				B89953AF2AF32E6C009C9DF5 /* Info.plist */,
@@ -267,16 +320,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				B87E01A82AF60D03003FD290 /* MainRouter.swift in Sources */,
+				B87E01CA2AFDBEDC003FD290 /* UIViewController+AlertController.swift in Sources */,
+				B87E01B92AFC57AC003FD290 /* SplashRouter.swift in Sources */,
 				B87E01AD2AF60F4A003FD290 /* MainView.swift in Sources */,
 				B87E01B42AFB29FA003FD290 /* NetworkManager.swift in Sources */,
+				B87E01C22AFC7193003FD290 /* TokenResponse.swift in Sources */,
 				B87E01AA2AF60E1B003FD290 /* MainPresenter.swift in Sources */,
 				B87E01A12AF60128003FD290 /* MainTabBarViewController.swift in Sources */,
-				B89953A62AF32E6B009C9DF5 /* ViewController.swift in Sources */,
 				B89953A22AF32E6B009C9DF5 /* AppDelegate.swift in Sources */,
 				B87E01A52AF60BE0003FD290 /* ImageCatalog.swift in Sources */,
+				B87E01BF2AFC6B7D003FD290 /* SplashInteractor.swift in Sources */,
 				B87E01B02AFB26A4003FD290 /* NetworkResult.swift in Sources */,
 				B87E01B22AFB27E0003FD290 /* NetworkRouter.swift in Sources */,
 				B87E01B62AFB2CC5003FD290 /* NetworkEndpoints.swift in Sources */,
+				B87E01BB2AFC5A70003FD290 /* SplashPresenter.swift in Sources */,
+				B87E01C52AFC74BD003FD290 /* SplashPresenterInputOutput.swift in Sources */,
+				B87E01C72AFDBDDE003FD290 /* Content.swift in Sources */,
+				B87E01BD2AFC5C6E003FD290 /* SplashView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
