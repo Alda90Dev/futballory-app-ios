@@ -9,14 +9,14 @@ import Foundation
 
 enum NetworkEndpoints {
     case getToken
-    case getProduct(id: Int)
+    case getMatches(date: String)
     
     var path: NetworkRouter {
         switch self {
         case .getToken:
-            return NetworkRouter(path: "login-app", method: .post)
-        case .getProduct(let id):
-            return NetworkRouter(path: "/products/\(id)", method: .get)
+            return NetworkRouter(path: "auth/login-app", method: .post)
+        case .getMatches(let date):
+            return NetworkRouter(path: "match/\(date)", method: .get)
         }
     }
 }

@@ -11,7 +11,7 @@ struct NetworkRouter {
     let path: String
     let method: HTTPMethod
     
-    private static let baseURLString = "https://futballory.onrender.com/api/auth/"
+    private static let baseURLString = "https://futballory.onrender.com/api/"
     
     enum HTTPMethod {
         case get

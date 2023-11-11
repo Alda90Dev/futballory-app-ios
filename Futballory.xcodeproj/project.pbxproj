@@ -25,6 +25,9 @@
 		B87E01C52AFC74BD003FD290 /* SplashPresenterInputOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87E01C42AFC74BD003FD290 /* SplashPresenterInputOutput.swift */; };
 		B87E01C72AFDBDDE003FD290 /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87E01C62AFDBDDE003FD290 /* Content.swift */; };
 		B87E01CA2AFDBEDC003FD290 /* UIViewController+AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87E01C92AFDBEDC003FD290 /* UIViewController+AlertController.swift */; };
+		B87E01CC2AFDC9AF003FD290 /* MainInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87E01CB2AFDC9AF003FD290 /* MainInteractor.swift */; };
+		B87E01CE2AFDCA84003FD290 /* MatchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87E01CD2AFDCA84003FD290 /* MatchResponse.swift */; };
+		B87E01D12AFDCD04003FD290 /* MainPresenterInputOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87E01D02AFDCD04003FD290 /* MainPresenterInputOutput.swift */; };
 		B89953A22AF32E6B009C9DF5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89953A12AF32E6B009C9DF5 /* AppDelegate.swift */; };
 		B89953AB2AF32E6C009C9DF5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B89953AA2AF32E6C009C9DF5 /* Assets.xcassets */; };
 		B89953AE2AF32E6C009C9DF5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B89953AC2AF32E6C009C9DF5 /* LaunchScreen.storyboard */; };
@@ -51,6 +54,9 @@
 		B87E01C42AFC74BD003FD290 /* SplashPresenterInputOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashPresenterInputOutput.swift; sourceTree = "<group>"; };
 		B87E01C62AFDBDDE003FD290 /* Content.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Content.swift; sourceTree = "<group>"; };
 		B87E01C92AFDBEDC003FD290 /* UIViewController+AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+AlertController.swift"; sourceTree = "<group>"; };
+		B87E01CB2AFDC9AF003FD290 /* MainInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainInteractor.swift; sourceTree = "<group>"; };
+		B87E01CD2AFDCA84003FD290 /* MatchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchResponse.swift; sourceTree = "<group>"; };
+		B87E01D02AFDCD04003FD290 /* MainPresenterInputOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenterInputOutput.swift; sourceTree = "<group>"; };
 		B899539E2AF32E6B009C9DF5 /* Futballory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Futballory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B89953A12AF32E6B009C9DF5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B89953AA2AF32E6C009C9DF5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -107,9 +113,10 @@
 		B87E01A62AF60CE5003FD290 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				B87E01CF2AFDCCD1003FD290 /* Presenter */,
 				B87E01A72AF60D03003FD290 /* MainRouter.swift */,
-				B87E01A92AF60E1B003FD290 /* MainPresenter.swift */,
 				B87E01AC2AF60F4A003FD290 /* MainView.swift */,
+				B87E01CB2AFDC9AF003FD290 /* MainInteractor.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -129,7 +136,6 @@
 			isa = PBXGroup;
 			children = (
 				B87E01C32AFC749B003FD290 /* Presenter */,
-				B87E01C02AFC7179003FD290 /* Models */,
 				B87E01B82AFC57AC003FD290 /* SplashRouter.swift */,
 				B87E01BC2AFC5C6E003FD290 /* SplashView.swift */,
 				B87E01BE2AFC6B7D003FD290 /* SplashInteractor.swift */,
@@ -141,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				B87E01C12AFC7193003FD290 /* TokenResponse.swift */,
+				B87E01CD2AFDCA84003FD290 /* MatchResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -160,6 +167,15 @@
 				B87E01C92AFDBEDC003FD290 /* UIViewController+AlertController.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		B87E01CF2AFDCCD1003FD290 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				B87E01A92AF60E1B003FD290 /* MainPresenter.swift */,
+				B87E01D02AFDCD04003FD290 /* MainPresenterInputOutput.swift */,
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 		B89953952AF32E6B009C9DF5 = {
@@ -183,10 +199,11 @@
 		B89953A02AF32E6B009C9DF5 /* Futballory */ = {
 			isa = PBXGroup;
 			children = (
-				B87E01B72AFC5792003FD290 /* Splash */,
 				B87E01AE2AFB2610003FD290 /* NetworkManager */,
-				B87E01A62AF60CE5003FD290 /* Main */,
 				B87E01A22AF60BB4003FD290 /* Utils */,
+				B87E01C02AFC7179003FD290 /* Models */,
+				B87E01B72AFC5792003FD290 /* Splash */,
+				B87E01A62AF60CE5003FD290 /* Main */,
 				B87E019F2AF600C5003FD290 /* MainTabBar */,
 				B89953A12AF32E6B009C9DF5 /* AppDelegate.swift */,
 				B89953AA2AF32E6C009C9DF5 /* Assets.xcassets */,
@@ -320,6 +337,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B87E01A82AF60D03003FD290 /* MainRouter.swift in Sources */,
+				B87E01D12AFDCD04003FD290 /* MainPresenterInputOutput.swift in Sources */,
 				B87E01CA2AFDBEDC003FD290 /* UIViewController+AlertController.swift in Sources */,
 				B87E01B92AFC57AC003FD290 /* SplashRouter.swift in Sources */,
 				B87E01AD2AF60F4A003FD290 /* MainView.swift in Sources */,
@@ -328,6 +346,7 @@
 				B87E01AA2AF60E1B003FD290 /* MainPresenter.swift in Sources */,
 				B87E01A12AF60128003FD290 /* MainTabBarViewController.swift in Sources */,
 				B89953A22AF32E6B009C9DF5 /* AppDelegate.swift in Sources */,
+				B87E01CC2AFDC9AF003FD290 /* MainInteractor.swift in Sources */,
 				B87E01A52AF60BE0003FD290 /* ImageCatalog.swift in Sources */,
 				B87E01BF2AFC6B7D003FD290 /* SplashInteractor.swift in Sources */,
 				B87E01B02AFB26A4003FD290 /* NetworkResult.swift in Sources */,
@@ -336,6 +355,7 @@
 				B87E01BB2AFC5A70003FD290 /* SplashPresenter.swift in Sources */,
 				B87E01C52AFC74BD003FD290 /* SplashPresenterInputOutput.swift in Sources */,
 				B87E01C72AFDBDDE003FD290 /* Content.swift in Sources */,
+				B87E01CE2AFDCA84003FD290 /* MatchResponse.swift in Sources */,
 				B87E01BD2AFC5C6E003FD290 /* SplashView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
