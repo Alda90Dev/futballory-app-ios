@@ -28,6 +28,9 @@
 		B87E01CC2AFDC9AF003FD290 /* MainInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87E01CB2AFDC9AF003FD290 /* MainInteractor.swift */; };
 		B87E01CE2AFDCA84003FD290 /* MatchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87E01CD2AFDCA84003FD290 /* MatchResponse.swift */; };
 		B87E01D12AFDCD04003FD290 /* MainPresenterInputOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87E01D02AFDCD04003FD290 /* MainPresenterInputOutput.swift */; };
+		B87E01D42B000B69003FD290 /* MainMatchViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87E01D32B000B69003FD290 /* MainMatchViewCell.swift */; };
+		B87E01D62B0022C0003FD290 /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87E01D52B0022C0003FD290 /* UIImageView+Extensions.swift */; };
+		B87E01D82B004657003FD290 /* MainMatchScoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87E01D72B004657003FD290 /* MainMatchScoreView.swift */; };
 		B89953A22AF32E6B009C9DF5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89953A12AF32E6B009C9DF5 /* AppDelegate.swift */; };
 		B89953AB2AF32E6C009C9DF5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B89953AA2AF32E6C009C9DF5 /* Assets.xcassets */; };
 		B89953AE2AF32E6C009C9DF5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B89953AC2AF32E6C009C9DF5 /* LaunchScreen.storyboard */; };
@@ -57,6 +60,9 @@
 		B87E01CB2AFDC9AF003FD290 /* MainInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainInteractor.swift; sourceTree = "<group>"; };
 		B87E01CD2AFDCA84003FD290 /* MatchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchResponse.swift; sourceTree = "<group>"; };
 		B87E01D02AFDCD04003FD290 /* MainPresenterInputOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenterInputOutput.swift; sourceTree = "<group>"; };
+		B87E01D32B000B69003FD290 /* MainMatchViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMatchViewCell.swift; sourceTree = "<group>"; };
+		B87E01D52B0022C0003FD290 /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
+		B87E01D72B004657003FD290 /* MainMatchScoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMatchScoreView.swift; sourceTree = "<group>"; };
 		B899539E2AF32E6B009C9DF5 /* Futballory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Futballory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B89953A12AF32E6B009C9DF5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B89953AA2AF32E6C009C9DF5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -113,9 +119,9 @@
 		B87E01A62AF60CE5003FD290 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				B87E01D22B000B0C003FD290 /* View */,
 				B87E01CF2AFDCCD1003FD290 /* Presenter */,
 				B87E01A72AF60D03003FD290 /* MainRouter.swift */,
-				B87E01AC2AF60F4A003FD290 /* MainView.swift */,
 				B87E01CB2AFDC9AF003FD290 /* MainInteractor.swift */,
 			);
 			path = Main;
@@ -165,6 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				B87E01C92AFDBEDC003FD290 /* UIViewController+AlertController.swift */,
+				B87E01D52B0022C0003FD290 /* UIImageView+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -176,6 +183,16 @@
 				B87E01D02AFDCD04003FD290 /* MainPresenterInputOutput.swift */,
 			);
 			path = Presenter;
+			sourceTree = "<group>";
+		};
+		B87E01D22B000B0C003FD290 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B87E01AC2AF60F4A003FD290 /* MainView.swift */,
+				B87E01D32B000B69003FD290 /* MainMatchViewCell.swift */,
+				B87E01D72B004657003FD290 /* MainMatchScoreView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		B89953952AF32E6B009C9DF5 = {
@@ -344,9 +361,12 @@
 				B87E01B42AFB29FA003FD290 /* NetworkManager.swift in Sources */,
 				B87E01C22AFC7193003FD290 /* TokenResponse.swift in Sources */,
 				B87E01AA2AF60E1B003FD290 /* MainPresenter.swift in Sources */,
+				B87E01D62B0022C0003FD290 /* UIImageView+Extensions.swift in Sources */,
 				B87E01A12AF60128003FD290 /* MainTabBarViewController.swift in Sources */,
 				B89953A22AF32E6B009C9DF5 /* AppDelegate.swift in Sources */,
 				B87E01CC2AFDC9AF003FD290 /* MainInteractor.swift in Sources */,
+				B87E01D82B004657003FD290 /* MainMatchScoreView.swift in Sources */,
+				B87E01D42B000B69003FD290 /* MainMatchViewCell.swift in Sources */,
 				B87E01A52AF60BE0003FD290 /* ImageCatalog.swift in Sources */,
 				B87E01BF2AFC6B7D003FD290 /* SplashInteractor.swift in Sources */,
 				B87E01B02AFB26A4003FD290 /* NetworkResult.swift in Sources */,

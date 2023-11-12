@@ -7,7 +7,17 @@
 
 import Foundation
 
-// MARK: - Welcome
+// MARK: - MatchStatus
+
+enum MatchStatus: String, Codable {
+    case scheduled = "SCHEDULED"
+    case inProgress = "IN PROGRESS"
+    case penalties = "PENALTIES"
+    case finished = "FINISHED"
+    case suspended = "SUSPENDED"
+}
+
+// MARK: - MatchResponse
 struct MatchResponse: Codable {
     let success: Bool
     let matches: [Match]
@@ -19,7 +29,8 @@ struct Match: Codable {
     let localTeam, guestTeam: Team
     let localScore, guestScore, localPenaltiesScore, guestPenaltiesScore: Int
     let winnerScore, loserScore: Int
-    let stage, status: String
+    let stage: String
+    let status: MatchStatus
     let stadium: Stadium
     let v: Int
     let loser: String?
@@ -37,9 +48,21 @@ struct Match: Codable {
         case guestPenaltiesScore = "guest_penalties_score"
         case winnerScore = "winner_score"
         case loserScore = "loser_score"
-        case stage, status, stadium
+        case stage
+        case status
+        case stadium
         case v = "__v"
         case loser, result, winner
+    }
+    
+    func finalLocalScore() -> String {
+        let penalties = localPenaltiesScore != 0 ? "(\(localPenaltiesScore))" : ""
+        return "\(localScore)\(penalties)"
+    }
+    
+    func finalGuestScore() -> String {
+        let penalties = guestPenaltiesScore != 0 ? "(\(guestPenaltiesScore))" : ""
+        return "\(guestScore)\(penalties)"
     }
 }
 
@@ -59,6 +82,12 @@ struct Team: Codable {
         case confederationID = "confederation_id"
         case v = "__v"
         case icon, flag
+    }
+    
+    func getFlagPathURL() -> URL? {
+        guard let url = URL(string: flag ?? "") else { return nil }
+        
+        return url
     }
 }
 

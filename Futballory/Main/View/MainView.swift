@@ -28,8 +28,9 @@ class MainView: UIViewController {
         table.backgroundColor = .white
         table.translatesAutoresizingMaskIntoConstraints = false
         table.tableHeaderView = imageTop
-        table.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        table.register(MainMatchViewCell.self, forCellReuseIdentifier: MainMatchViewCell.reuseIdentifier)
         table.dataSource = self
+        table.delegate = self
         return table
     }()
 
@@ -42,12 +43,6 @@ class MainView: UIViewController {
     }()
     
     private var matches: [Match] = []
-    var characters = ["Link1", "Zelda2", "Ganondorf3", "Midna4","Link5", "Zelda6", "Ganondorf7", "Midna8","Link9", "Zelda10", "Ganondorf11", "Midna12",
-                      "Link13", "Zelda14", "Ganondorf15", "Midna16","Link17", "Zelda18", "Ganondorf19", "Midna","Link", "Zelda", "Ganondorf", "Midna",
-                      "Link20", "Zelda21", "Ganondorf22", "Midna23","Link24", "Zelda25", "Ganondorf26", "Midna27","Link28", "Zelda29", "Ganondorf30", "Midna31",
-                      "Link32", "Zelda33", "Ganondorf34", "Midna35","Link36", "Zelda37", "Ganondorf38", "Midna","Link", "Zelda", "Ganondorf", "Midna",
-                      "Link39", "Zelda40", "Ganondorf41", "Midna42","Link43", "Zelda44", "Ganondorf45", "Midna46","Link47", "Zelda48", "Ganondorf49", "Midna50"
-                        ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -107,9 +102,17 @@ extension MainView: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = matches[indexPath.row].localTeam.name
-        cell.textLabel?.textColor = .gray
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: MainMatchViewCell.reuseIdentifier, for: indexPath) as? MainMatchViewCell else {
+            return UITableViewCell()
+        }
+        
+        cell.config(matches[indexPath.row])
         return cell
+    }
+}
+
+extension MainView: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
     }
 }
