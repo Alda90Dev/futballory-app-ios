@@ -12,9 +12,9 @@ class MainTabBarViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let controller1 = UIViewController()
-        controller1.tabBarItem = UITabBarItem(tabBarSystemItem: .contacts, tag: 1)
-        let nav1 = UINavigationController(rootViewController: controller1)
+        let featuresController = TabManView()
+        featuresController.tabBarItem = UITabBarItem(tabBarSystemItem: .contacts, tag: 1)
+        let navFeatures = UINavigationController(rootViewController: featuresController)
         
         let controller2 = UIViewController()
         controller2.tabBarItem = UITabBarItem(tabBarSystemItem: .contacts, tag: 2)
@@ -33,7 +33,7 @@ class MainTabBarViewController: UITabBarController {
         let nav5 = UINavigationController(rootViewController: controller5)
         
         viewControllers?.removeAll()
-        viewControllers = [nav1, nav2, navMain, nav4, nav5]
+        viewControllers = [navFeatures, nav2, navMain, nav4, nav5]
         tabBar.backgroundColor = .white
         selectedIndex = 2
         

@@ -8,5 +8,6 @@ target 'Futballory' do
   # Pods for Futballory
   pod 'SDWebImage', '~> 5.0'
   pod 'ProgressHUD', '~> 14.1.0'
+  pod 'Tabman', '~> 3.0'
 
 end
