@@ -37,12 +37,12 @@ class SplashPresenter: SplashPresenterProtocol {
 }
 
 extension SplashPresenter: SplashInteractorOutputProtocol {
-    func interactorGetDataPresenter(receivedData: TokenResponse?, error: Error?) {
+    func interactorGetDatesPresenter(receivedData: DateResponse?, error: Error?) {
         output.splashDataErrorPublisher.send(error)
         
         if let response = receivedData,
            response.success {
-            NetworkManager.token = receivedData?.token
+            Defaults.shared.dates = response.dates
             router?.goTo(from: view)
         }
     }

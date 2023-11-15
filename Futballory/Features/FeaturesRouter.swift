@@ -2,7 +2,7 @@
 //  FeaturesRouter.swift
 //  Futballory
 //
-//  Created by Aldair Carrillo on 11/11/23.
+//  Created by Aldair Carrillo on 14/11/23.
 //
 
 import UIKit
@@ -10,14 +10,14 @@ import UIKit
 /*/ FeaturesRouter Protocol */
 
 protocol FeaturesRouterProtocol {
-    static func createFeaturesModule() -> UIViewController
+    static func createFeaturesModule(featureDate: String?) -> UIViewController
     func goTo(from view: FeaturesViewProtocol?)
 }
 
 /*/ FeaturesRouter */
 
 class FeaturesRouter: FeaturesRouterProtocol {
-    static func createFeaturesModule() -> UIViewController {
+    static func createFeaturesModule(featureDate: String? = nil) -> UIViewController {
         let view = FeaturesView()
         let interactor = MainInteractor()
         let presenter: FeaturesPresenterProtocol & MainInteractorOutputProtocol = FeaturesPresenter()
@@ -26,6 +26,7 @@ class FeaturesRouter: FeaturesRouterProtocol {
         interactor.presenter = presenter
         presenter.router = router
         presenter.interactor = interactor
+        presenter.featureDate = featureDate
         view.presenter = presenter
         presenter.view = view
         

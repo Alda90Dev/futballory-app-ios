@@ -11,8 +11,8 @@ class MainTabBarViewController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        let featuresController = TabManView()
+        
+        let featuresController = FeaturesTabsRouter.createFeaturesTabModule()
         featuresController.tabBarItem = UITabBarItem(tabBarSystemItem: .contacts, tag: 1)
         let navFeatures = UINavigationController(rootViewController: featuresController)
         

@@ -10,7 +10,7 @@ import Combine
 
 /*/ FeaturesView Protocol */
 
-protocol  FeaturesViewProtocol: AnyObject {
+protocol FeaturesViewProtocol: AnyObject {
     var presenter: FeaturesPresenterProtocol? { get set }
 }
 
