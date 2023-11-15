@@ -13,13 +13,13 @@ class MainTabBarViewController: UITabBarController {
         super.viewDidLoad()
         
         let featuresController = FeaturesTabsRouter.createFeaturesTabModule()
-        featuresController.tabBarItem = UITabBarItem(tabBarSystemItem: .contacts, tag: 1)
-        let navFeatures = UINavigationController(rootViewController: featuresController)
         let featuresOption = UITabBarItem()
         featuresOption.title = Content.mainTabBarTitles.features
         featuresOption.image = ImageCatalog.iconFeatures
         featuresOption.selectedImage = ImageCatalog.iconFeaturesSelected
-        navFeatures.tabBarItem = featuresOption
+        featuresController.tabBarItem = featuresOption
+        let navFeatures = UINavigationController(rootViewController: featuresController)
+        
         
         let controller2 = UIViewController()
         controller2.tabBarItem = UITabBarItem(tabBarSystemItem: .contacts, tag: 2)
