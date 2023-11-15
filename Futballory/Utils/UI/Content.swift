@@ -13,4 +13,8 @@ struct Content {
     struct alert {
         static let okMessage: String = "Ok"
     }
+    
+    struct mainTabBarTitles {
+        static let features: String = "Features"
+    }
 }
