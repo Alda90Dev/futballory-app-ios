@@ -21,9 +21,13 @@ class MainTabBarViewController: UITabBarController {
         let navFeatures = UINavigationController(rootViewController: featuresController)
         
         
-        let controller2 = UIViewController()
-        controller2.tabBarItem = UITabBarItem(tabBarSystemItem: .contacts, tag: 2)
-        let nav2 = UINavigationController(rootViewController: controller2)
+        let groupsController = GroupsRouter.createGroupsModule()
+        let groupsOption = UITabBarItem()
+        groupsOption.title = Content.mainTabBarTitles.groups
+        groupsOption.image = ImageCatalog.iconGroups
+        groupsOption.selectedImage = ImageCatalog.iconGroupsSelected
+        groupsController.tabBarItem = groupsOption
+        let navGroups = UINavigationController(rootViewController: groupsController)
         
         let mainController = MainRouter.createMainModule()
         let navMain = UINavigationController(rootViewController: mainController)
@@ -38,7 +42,7 @@ class MainTabBarViewController: UITabBarController {
         let nav5 = UINavigationController(rootViewController: controller5)
         
         viewControllers?.removeAll()
-        viewControllers = [navFeatures, nav2, navMain, nav4, nav5]
+        viewControllers = [navFeatures, navGroups, navMain, nav4, nav5]
         tabBar.backgroundColor = .white
         selectedIndex = 2
         

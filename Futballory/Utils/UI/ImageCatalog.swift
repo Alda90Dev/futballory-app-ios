@@ -14,4 +14,6 @@ struct ImageCatalog {
     static let iconPlaceholderFlag: UIImage = UIImage(named: "ic_placeholder_flag") ?? UIImage()
     static let iconFeatures: UIImage = UIImage(named: "ic_main_tab_features") ?? UIImage()
     static let iconFeaturesSelected: UIImage = UIImage(named: "ic_main_tab_features_selected") ?? UIImage()
+    static let iconGroups: UIImage = UIImage(named: "ic_main_tab_groups") ?? UIImage()
+    static let iconGroupsSelected: UIImage = UIImage(named: "ic_main_tab_groups_selected") ?? UIImage()
 }

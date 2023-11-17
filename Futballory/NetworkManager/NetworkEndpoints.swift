@@ -11,6 +11,7 @@ enum NetworkEndpoints {
     case getToken
     case getDates
     case getMatches(date: String)
+    case getGroups
     
     var path: NetworkRouter {
         switch self {
@@ -20,6 +21,8 @@ enum NetworkEndpoints {
             return NetworkRouter(path: "match", method: .get)
         case .getMatches(let date):
             return NetworkRouter(path: "match/\(date)", method: .get)
+        case .getGroups:
+            return NetworkRouter(path: "group", method: .get)
         }
     }
 }
