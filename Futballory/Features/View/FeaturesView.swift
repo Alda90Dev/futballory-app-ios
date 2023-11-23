@@ -27,6 +27,7 @@ class FeaturesView: UIViewController {
         table.backgroundColor = .white
         table.translatesAutoresizingMaskIntoConstraints = false
         table.register(FeatureViewCell.self, forCellReuseIdentifier: FeatureViewCell.resuseIdentifier)
+        table.allowsSelection = false
         table.dataSource = self
         table.delegate = self
         return table

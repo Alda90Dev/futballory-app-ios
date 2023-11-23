@@ -50,7 +50,7 @@ extension GroupsPresenter: GroupsInteractorOutputProtocol {
             output.groupsDataErrorPublisher.send(.failure(error))
         } else if let response = receivedData,
                   response.success {
-            output.groupsDataErrorPublisher.send(.success(response.grouped))
+            output.groupsDataErrorPublisher.send(.success(response.groups))
         }
     }
 }

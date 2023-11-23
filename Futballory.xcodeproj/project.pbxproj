@@ -48,6 +48,10 @@
 		B87E02042B06FB69003FD290 /* GroupsPresenterInputOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87E02032B06FB69003FD290 /* GroupsPresenterInputOutput.swift */; };
 		B87E02062B06FD44003FD290 /* GroupsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87E02052B06FD44003FD290 /* GroupsPresenter.swift */; };
 		B87E02092B06FF52003FD290 /* GroupsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87E02082B06FF52003FD290 /* GroupsView.swift */; };
+		B87E020B2B0D8A7A003FD290 /* GroupsDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87E020A2B0D8A7A003FD290 /* GroupsDataView.swift */; };
+		B87E020D2B0D8EE1003FD290 /* GroupsTitleDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87E020C2B0D8EE1003FD290 /* GroupsTitleDataView.swift */; };
+		B87E020F2B0D9689003FD290 /* GroupsTeamDataViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87E020E2B0D9689003FD290 /* GroupsTeamDataViewCell.swift */; };
+		B87E02112B0D9855003FD290 /* TeamRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87E02102B0D9855003FD290 /* TeamRowView.swift */; };
 		B89953A22AF32E6B009C9DF5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89953A12AF32E6B009C9DF5 /* AppDelegate.swift */; };
 		B89953AB2AF32E6C009C9DF5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B89953AA2AF32E6C009C9DF5 /* Assets.xcassets */; };
 		B89953AE2AF32E6C009C9DF5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B89953AC2AF32E6C009C9DF5 /* LaunchScreen.storyboard */; };
@@ -97,6 +101,10 @@
 		B87E02032B06FB69003FD290 /* GroupsPresenterInputOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsPresenterInputOutput.swift; sourceTree = "<group>"; };
 		B87E02052B06FD44003FD290 /* GroupsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsPresenter.swift; sourceTree = "<group>"; };
 		B87E02082B06FF52003FD290 /* GroupsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsView.swift; sourceTree = "<group>"; };
+		B87E020A2B0D8A7A003FD290 /* GroupsDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsDataView.swift; sourceTree = "<group>"; };
+		B87E020C2B0D8EE1003FD290 /* GroupsTitleDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsTitleDataView.swift; sourceTree = "<group>"; };
+		B87E020E2B0D9689003FD290 /* GroupsTeamDataViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsTeamDataViewCell.swift; sourceTree = "<group>"; };
+		B87E02102B0D9855003FD290 /* TeamRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamRowView.swift; sourceTree = "<group>"; };
 		B899539E2AF32E6B009C9DF5 /* Futballory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Futballory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B89953A12AF32E6B009C9DF5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B89953AA2AF32E6C009C9DF5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -302,6 +310,10 @@
 			isa = PBXGroup;
 			children = (
 				B87E02082B06FF52003FD290 /* GroupsView.swift */,
+				B87E020A2B0D8A7A003FD290 /* GroupsDataView.swift */,
+				B87E020C2B0D8EE1003FD290 /* GroupsTitleDataView.swift */,
+				B87E020E2B0D9689003FD290 /* GroupsTeamDataViewCell.swift */,
+				B87E02102B0D9855003FD290 /* TeamRowView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -482,10 +494,12 @@
 				B87E01C22AFC7193003FD290 /* TokenResponse.swift in Sources */,
 				B87E01AA2AF60E1B003FD290 /* MainPresenter.swift in Sources */,
 				B87E01D62B0022C0003FD290 /* UIImageView+Extensions.swift in Sources */,
+				B87E020D2B0D8EE1003FD290 /* GroupsTitleDataView.swift in Sources */,
 				B87E01A12AF60128003FD290 /* MainTabBarViewController.swift in Sources */,
 				B87E01E82B0302DA003FD290 /* DateResponse.swift in Sources */,
 				B89953A22AF32E6B009C9DF5 /* AppDelegate.swift in Sources */,
 				B87E02062B06FD44003FD290 /* GroupsPresenter.swift in Sources */,
+				B87E020B2B0D8A7A003FD290 /* GroupsDataView.swift in Sources */,
 				B87E01CC2AFDC9AF003FD290 /* MainInteractor.swift in Sources */,
 				B87E01F22B044879003FD290 /* FeaturesRouter.swift in Sources */,
 				B87E01D82B004657003FD290 /* MainMatchScoreView.swift in Sources */,
@@ -493,6 +507,7 @@
 				B87E01A52AF60BE0003FD290 /* ImageCatalog.swift in Sources */,
 				B87E01E42B0072BA003FD290 /* FeaturesView.swift in Sources */,
 				B87E01F92B05AD4F003FD290 /* FeatureTeamView.swift in Sources */,
+				B87E020F2B0D9689003FD290 /* GroupsTeamDataViewCell.swift in Sources */,
 				B87E02042B06FB69003FD290 /* GroupsPresenterInputOutput.swift in Sources */,
 				B87E01BF2AFC6B7D003FD290 /* SplashInteractor.swift in Sources */,
 				B87E01B02AFB26A4003FD290 /* NetworkResult.swift in Sources */,
@@ -507,6 +522,7 @@
 				B87E01FF2B06F6D7003FD290 /* GroupsInteractor.swift in Sources */,
 				B87E02012B06F7DD003FD290 /* GroupsResponse.swift in Sources */,
 				B87E01EB2B030543003FD290 /* Defaults.swift in Sources */,
+				B87E02112B0D9855003FD290 /* TeamRowView.swift in Sources */,
 				B87E01CE2AFDCA84003FD290 /* MatchResponse.swift in Sources */,
 				B87E01BD2AFC5C6E003FD290 /* SplashView.swift in Sources */,
 			);

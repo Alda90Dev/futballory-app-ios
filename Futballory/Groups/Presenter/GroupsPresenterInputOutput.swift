@@ -17,5 +17,5 @@ struct GroupsPresenterInput {
 /*/ GroupsPresenterOutput */
 
 struct GroupsPresenterOutput {
-    let groupsDataErrorPublisher = PassthroughSubject<Result<Grouped, Error>, Never>()
+    let groupsDataErrorPublisher = PassthroughSubject<Result<[Group], Error>, Never>()
 }
