@@ -66,6 +66,12 @@ struct Match: Codable {
     }
 }
 
+// MARK: - TeamsResponse
+struct TeamsResponse: Codable {
+    let success: Bool
+    let nationalTeams: [Team]
+}
+
 // MARK: - Team
 struct Team: Codable {
     let id, name, nameEn, code: String

@@ -17,5 +17,6 @@ struct Content {
     struct mainTabBarTitles {
         static let features: String = "Features"
         static let groups: String = "Groups"
+        static let teams: String = "Teams"
     }
 }

@@ -16,4 +16,6 @@ struct ImageCatalog {
     static let iconFeaturesSelected: UIImage = UIImage(named: "ic_main_tab_features_selected") ?? UIImage()
     static let iconGroups: UIImage = UIImage(named: "ic_main_tab_groups") ?? UIImage()
     static let iconGroupsSelected: UIImage = UIImage(named: "ic_main_tab_groups_selected") ?? UIImage()
+    static let iconTeams: UIImage = UIImage(named: "ic_main_tab_teams") ?? UIImage()
+    static let iconTeamsSelected: UIImage = UIImage(named: "ic_main_tab_teams_selected") ?? UIImage()
 }

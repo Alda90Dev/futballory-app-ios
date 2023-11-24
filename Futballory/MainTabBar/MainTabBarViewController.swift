@@ -33,16 +33,20 @@ class MainTabBarViewController: UITabBarController {
         let navMain = UINavigationController(rootViewController: mainController)
         navMain.title = ""
         
-        let controller4 = UIViewController()
-        controller4.tabBarItem = UITabBarItem(tabBarSystemItem: .contacts, tag: 4)
-        let nav4 = UINavigationController(rootViewController: controller4)
+        let teamsController = TeamsRouter.createTeamsModule()
+        let teamsOption = UITabBarItem()
+        teamsOption.title = Content.mainTabBarTitles.teams
+        teamsOption.image = ImageCatalog.iconTeams
+        teamsOption.selectedImage = ImageCatalog.iconTeamsSelected
+        teamsController.tabBarItem = teamsOption
+        let navTeams = UINavigationController(rootViewController: teamsController)
         
         let controller5 = UIViewController()
         controller5.tabBarItem = UITabBarItem(tabBarSystemItem: .contacts, tag: 5)
         let nav5 = UINavigationController(rootViewController: controller5)
         
         viewControllers?.removeAll()
-        viewControllers = [navFeatures, navGroups, navMain, nav4, nav5]
+        viewControllers = [navFeatures, navGroups, navMain, navTeams, nav5]
         tabBar.backgroundColor = .white
         selectedIndex = 2
         
