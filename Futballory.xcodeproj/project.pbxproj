@@ -58,6 +58,11 @@
 		B87E021B2B0EEB19003FD290 /* TeamsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87E021A2B0EEB19003FD290 /* TeamsPresenter.swift */; };
 		B87E021E2B0EECAE003FD290 /* TeamsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87E021D2B0EECAE003FD290 /* TeamsView.swift */; };
 		B87E02202B103080003FD290 /* TeamTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87E021F2B103080003FD290 /* TeamTableViewCell.swift */; };
+		B87E02232B10347C003FD290 /* StadiumsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87E02222B10347C003FD290 /* StadiumsRouter.swift */; };
+		B87E02252B103575003FD290 /* StadiumsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87E02242B103575003FD290 /* StadiumsInteractor.swift */; };
+		B87E022A2B1037A2003FD290 /* StadiumsPresenterInputOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87E02292B1037A2003FD290 /* StadiumsPresenterInputOutput.swift */; };
+		B87E022C2B103865003FD290 /* StadiumsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87E022B2B103865003FD290 /* StadiumsPresenter.swift */; };
+		B87E022F2B103ACA003FD290 /* StadiumsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87E022E2B103ACA003FD290 /* StadiumsView.swift */; };
 		B89953A22AF32E6B009C9DF5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89953A12AF32E6B009C9DF5 /* AppDelegate.swift */; };
 		B89953AB2AF32E6C009C9DF5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B89953AA2AF32E6C009C9DF5 /* Assets.xcassets */; };
 		B89953AE2AF32E6C009C9DF5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B89953AC2AF32E6C009C9DF5 /* LaunchScreen.storyboard */; };
@@ -117,6 +122,11 @@
 		B87E021A2B0EEB19003FD290 /* TeamsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsPresenter.swift; sourceTree = "<group>"; };
 		B87E021D2B0EECAE003FD290 /* TeamsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsView.swift; sourceTree = "<group>"; };
 		B87E021F2B103080003FD290 /* TeamTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamTableViewCell.swift; sourceTree = "<group>"; };
+		B87E02222B10347C003FD290 /* StadiumsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StadiumsRouter.swift; sourceTree = "<group>"; };
+		B87E02242B103575003FD290 /* StadiumsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StadiumsInteractor.swift; sourceTree = "<group>"; };
+		B87E02292B1037A2003FD290 /* StadiumsPresenterInputOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StadiumsPresenterInputOutput.swift; sourceTree = "<group>"; };
+		B87E022B2B103865003FD290 /* StadiumsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StadiumsPresenter.swift; sourceTree = "<group>"; };
+		B87E022E2B103ACA003FD290 /* StadiumsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StadiumsView.swift; sourceTree = "<group>"; };
 		B899539E2AF32E6B009C9DF5 /* Futballory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Futballory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B89953A12AF32E6B009C9DF5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B89953AA2AF32E6C009C9DF5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -359,6 +369,34 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		B87E02212B1033FE003FD290 /* Stadiums */ = {
+			isa = PBXGroup;
+			children = (
+				B87E022D2B103AB5003FD290 /* View */,
+				B87E02282B103787003FD290 /* presenter */,
+				B87E02222B10347C003FD290 /* StadiumsRouter.swift */,
+				B87E02242B103575003FD290 /* StadiumsInteractor.swift */,
+			);
+			path = Stadiums;
+			sourceTree = "<group>";
+		};
+		B87E02282B103787003FD290 /* presenter */ = {
+			isa = PBXGroup;
+			children = (
+				B87E02292B1037A2003FD290 /* StadiumsPresenterInputOutput.swift */,
+				B87E022B2B103865003FD290 /* StadiumsPresenter.swift */,
+			);
+			path = presenter;
+			sourceTree = "<group>";
+		};
+		B87E022D2B103AB5003FD290 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B87E022E2B103ACA003FD290 /* StadiumsView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		B89953952AF32E6B009C9DF5 = {
 			isa = PBXGroup;
 			children = (
@@ -380,6 +418,7 @@
 		B89953A02AF32E6B009C9DF5 /* Futballory */ = {
 			isa = PBXGroup;
 			children = (
+				B87E02212B1033FE003FD290 /* Stadiums */,
 				B87E02122B0EE797003FD290 /* Teams */,
 				B87E01FA2B06F38A003FD290 /* Groups */,
 				B87E01ED2B03125C003FD290 /* FeaturesTabs */,
@@ -529,12 +568,14 @@
 				B87E02092B06FF52003FD290 /* GroupsView.swift in Sources */,
 				B87E01DB2B006D96003FD290 /* FeaturesTabsRouter.swift in Sources */,
 				B87E01D12AFDCD04003FD290 /* MainPresenterInputOutput.swift in Sources */,
+				B87E022C2B103865003FD290 /* StadiumsPresenter.swift in Sources */,
 				B87E01CA2AFDBEDC003FD290 /* UIViewController+AlertController.swift in Sources */,
 				B87E02202B103080003FD290 /* TeamTableViewCell.swift in Sources */,
 				B87E01B92AFC57AC003FD290 /* SplashRouter.swift in Sources */,
 				B87E01AD2AF60F4A003FD290 /* MainView.swift in Sources */,
 				B87E01B42AFB29FA003FD290 /* NetworkManager.swift in Sources */,
 				B87E01C22AFC7193003FD290 /* TokenResponse.swift in Sources */,
+				B87E022A2B1037A2003FD290 /* StadiumsPresenterInputOutput.swift in Sources */,
 				B87E01AA2AF60E1B003FD290 /* MainPresenter.swift in Sources */,
 				B87E02192B0EEA9B003FD290 /* TeamsPresenterInputOutput.swift in Sources */,
 				B87E01D62B0022C0003FD290 /* UIImageView+Extensions.swift in Sources */,
@@ -547,6 +588,7 @@
 				B87E01CC2AFDC9AF003FD290 /* MainInteractor.swift in Sources */,
 				B87E01F22B044879003FD290 /* FeaturesRouter.swift in Sources */,
 				B87E021E2B0EECAE003FD290 /* TeamsView.swift in Sources */,
+				B87E02252B103575003FD290 /* StadiumsInteractor.swift in Sources */,
 				B87E01D82B004657003FD290 /* MainMatchScoreView.swift in Sources */,
 				B87E01D42B000B69003FD290 /* MainMatchViewCell.swift in Sources */,
 				B87E01A52AF60BE0003FD290 /* ImageCatalog.swift in Sources */,
@@ -568,8 +610,10 @@
 				B87E01FF2B06F6D7003FD290 /* GroupsInteractor.swift in Sources */,
 				B87E02012B06F7DD003FD290 /* GroupsResponse.swift in Sources */,
 				B87E01EB2B030543003FD290 /* Defaults.swift in Sources */,
+				B87E02232B10347C003FD290 /* StadiumsRouter.swift in Sources */,
 				B87E02162B0EE8BC003FD290 /* TeamsInteractor.swift in Sources */,
 				B87E02112B0D9855003FD290 /* TeamRowView.swift in Sources */,
+				B87E022F2B103ACA003FD290 /* StadiumsView.swift in Sources */,
 				B87E02142B0EE7B9003FD290 /* TeamsRouter.swift in Sources */,
 				B87E01CE2AFDCA84003FD290 /* MatchResponse.swift in Sources */,
 				B87E01BD2AFC5C6E003FD290 /* SplashView.swift in Sources */,

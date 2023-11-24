@@ -13,6 +13,7 @@ enum NetworkEndpoints {
     case getMatches(date: String)
     case getGroups
     case getTeams
+    case getStadiums
     
     var path: NetworkRouter {
         switch self {
@@ -26,6 +27,8 @@ enum NetworkEndpoints {
             return NetworkRouter(path: "group", method: .get)
         case .getTeams:
             return NetworkRouter(path: "national_team", method: .get)
+        case .getStadiums:
+            return NetworkRouter(path: "stadium", method: .get)
         }
     }
 }

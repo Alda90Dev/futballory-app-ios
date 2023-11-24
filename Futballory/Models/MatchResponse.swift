@@ -97,6 +97,12 @@ struct Team: Codable {
     }
 }
 
+// MARK: - StadiumsResponse
+struct StadiumsResponse: Codable {
+    let success: Bool
+    let stadiums: [Stadium]
+}
+
 // MARK: - Stadium
 struct Stadium: Codable {
     let id, name, nameEn: String
