@@ -16,7 +16,6 @@ protocol TeamsPresenterProtocol: AnyObject {
     var router: TeamsRouterProtocol? { get set }
     
     func bind(input: TeamsPresenterInput) -> TeamsPresenterOutput
-    func navigate()
 }
 
 /*/ TeamsPresenter */
@@ -36,11 +35,11 @@ extension TeamsPresenter: TeamsPresenterProtocol {
             self?.interactor?.getTeams()
         }.store(in: &subscriptions)
         
+        input.goToDetail.sink { [weak self] team in
+            self?.router?.goTo(from: self?.view)
+        }.store(in: &subscriptions)
+        
         return output
-    }
-    
-    func navigate() {
-        router?.goTo(from: view)
     }
 }
 

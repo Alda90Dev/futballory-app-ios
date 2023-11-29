@@ -1,33 +1,33 @@
 //
-//  SatadiumsView.swift
+//  TeamDetailView.swift
 //  Futballory
 //
-//  Created by Aldair Carrillo on 23/11/23.
+//  Created by Aldair Carrillo on 28/11/23.
 //
 
 import UIKit
 import Combine
 
-/*/ StadiumsView Protocol */
+/*/ TeamDetailView Protocol */
 
-protocol StadiumsViewProtocol: AnyObject {
-    var presenter: StadiumsPresenterProtocol? { get set }
+protocol TeamDetailViewProtocol: AnyObject {
+    var presenter: TeamDetailPresenterProtocol? { get set }
 }
 
-/*/ StadiumsView */
+/*/ TeamDetailView */
 
-class StadiumsView: UIViewController {
-    var presenter: StadiumsPresenterProtocol?
+class TeamDetailView: UIViewController {
+    var presenter: TeamDetailPresenterProtocol?
     
-    private var subscriptions = Set<AnyCancellable>()
-    private let presenterInput = StadiumsPresenterInput()
+    private var subscriptions =  Set<AnyCancellable>()
+    private let presenterInput = TeamDetailPresenterInput()
     private let appearance = UINavigationBarAppearance()
     
     private lazy var tableView: UITableView = {
         let table = UITableView(frame: .init(x: 0, y: 0, width: 0, height: 0))
         table.backgroundColor = .white
         table.translatesAutoresizingMaskIntoConstraints = false
-        table.register(StadiumViewCell.self, forCellReuseIdentifier: StadiumViewCell.reuseIdentifier)
+        table.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         table.allowsSelection = false
         table.separatorStyle = .none
         table.dataSource = self
@@ -35,15 +35,15 @@ class StadiumsView: UIViewController {
         return table
     }()
     
-    private var stadiums: [Stadium] = []
+    private var players: [Player] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = Content.mainTabBarTitles.stadiums
+        title = "Team Detail"
         view.backgroundColor = .white
         setupTableView()
         bind()
-        presenterInput.stadiums.send()
+        presenterInput.players.send()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -57,19 +57,19 @@ class StadiumsView: UIViewController {
     private func bind() {
         let output = presenter?.bind(input: presenterInput)
         
-        output?.stadiumsDataErrorPublisher
+        output?.playersDataErrorPublisher
             .receive(on: DispatchQueue.main)
             .sink(receiveValue: { [weak self] result in
                 switch result {
                 case .success(let data):
-                    self?.stadiums = data
+                    self?.players = data
                     self?.tableView.reloadData()
                 case .failure(let error):
                     self?.presentAlert(Content.errorMessage, message: error.localizedDescription)
                 }
             }).store(in: &subscriptions)
     }
-    
+
     private func setupTableView() {
         view.addSubview(tableView)
         NSLayoutConstraint.activate([
@@ -90,24 +90,22 @@ class StadiumsView: UIViewController {
     }
 }
 
-extension StadiumsView: StadiumsViewProtocol { }
+extension TeamDetailView: TeamDetailViewProtocol { }
 
-extension StadiumsView: UITableViewDataSource {
+extension TeamDetailView: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return stadiums.count
+        return players.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: StadiumViewCell.reuseIdentifier, for: indexPath) as? StadiumViewCell else {
-            return UITableViewCell()
-        }
+        let cell = UITableViewCell()
         
-        cell.config(stadiums[indexPath.row])
+        cell.textLabel?.text = players[indexPath.row].name
         return cell
     }
 }
 
-extension StadiumsView: UITableViewDelegate {
+extension TeamDetailView: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
     }

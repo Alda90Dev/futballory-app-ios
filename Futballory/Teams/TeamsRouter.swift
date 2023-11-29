@@ -33,5 +33,10 @@ class TeamsRouter: TeamsRouterProtocol {
     }
     
     func goTo(from view: TeamsViewProtocol?) {
+        let teamDetailView = TeamDetailRouter.createTeamDetailModule()
+        
+        if let vc = view as? UIViewController {
+            vc.navigationController?.pushViewController(teamDetailView, animated: true)
+        }
     }
 }

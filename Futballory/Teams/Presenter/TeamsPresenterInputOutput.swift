@@ -12,6 +12,7 @@ import Combine
 
 struct TeamsPresenterInput {
     let teams = PassthroughSubject<Void, Never>()
+    let goToDetail = PassthroughSubject<Team, Never>()
 }
 
 /*/ TeamsPresenterOutput */

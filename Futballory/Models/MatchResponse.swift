@@ -109,7 +109,7 @@ struct Stadium: Codable {
     let capacity: Int
     let city: String
     let v: Int
-    let photo: String
+    let photo: String?
 
     enum CodingKeys: String, CodingKey {
         case id = "_id"
@@ -118,5 +118,11 @@ struct Stadium: Codable {
         case capacity, city
         case v = "__v"
         case photo
+    }
+    
+    func getPhotoPathURL() -> URL? {
+        guard let url = URL(string: photo ?? "") else { return nil }
+        
+        return url
     }
 }

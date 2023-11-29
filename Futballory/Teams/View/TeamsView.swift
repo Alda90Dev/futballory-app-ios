@@ -28,7 +28,6 @@ class TeamsView: UIViewController {
         table.backgroundColor = .white
         table.translatesAutoresizingMaskIntoConstraints = false
         table.register(TeamTableViewCell.self, forCellReuseIdentifier: TeamTableViewCell.reuseIdentifier)
-        table.allowsSelection = false
         table.dataSource = self
         table.delegate = self
         return table
@@ -108,5 +107,9 @@ extension TeamsView: UITableViewDataSource {
 extension TeamsView: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        presenterInput.goToDetail.send(teams[indexPath.row])
     }
 }
