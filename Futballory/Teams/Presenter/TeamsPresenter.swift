@@ -36,7 +36,7 @@ extension TeamsPresenter: TeamsPresenterProtocol {
         }.store(in: &subscriptions)
         
         input.goToDetail.sink { [weak self] team in
-            self?.router?.goTo(from: self?.view)
+            self?.router?.goTo(from: self?.view, team: team)
         }.store(in: &subscriptions)
         
         return output

@@ -13,6 +13,12 @@ struct PlayersResponse: Codable {
     let players: [Player]
 }
 
+// MARK: - TeamPlayers
+struct TeamPlayers {
+    let playerType: PlayerType
+    let players: [Player]
+}
+
 // MARK: - Player
 struct Player: Codable {
     let id, name, displayName, completeName: String

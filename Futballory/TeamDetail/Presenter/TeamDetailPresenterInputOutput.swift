@@ -12,10 +12,12 @@ import Combine
 
 struct TeamDetailPresenterInput {
     let players = PassthroughSubject<Void, Never>()
+    let teamData = PassthroughSubject<Void,Never>()
 }
 
 /*/ TeamDetailPresenterOutput */
 
 struct TeamDetailPresenterOutput {
-    let playersDataErrorPublisher = PassthroughSubject<Result<[Player], Error>, Never>()
+    let playersDataErrorPublisher = PassthroughSubject<Result<[TeamPlayers], Error>, Never>()
+    let teamDataPublisher = PassthroughSubject<(String, URL?),Never>()
 }

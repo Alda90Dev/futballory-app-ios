@@ -11,7 +11,7 @@ import UIKit
 
 protocol TeamsRouterProtocol {
     static func createTeamsModule() -> UIViewController
-    func goTo(from view: TeamsViewProtocol?)
+    func goTo(from view: TeamsViewProtocol?, team: Team)
 }
 
 /*/ TeamsRouter */
@@ -32,8 +32,8 @@ class TeamsRouter: TeamsRouterProtocol {
         return view
     }
     
-    func goTo(from view: TeamsViewProtocol?) {
-        let teamDetailView = TeamDetailRouter.createTeamDetailModule()
+    func goTo(from view: TeamsViewProtocol?, team: Team) {
+        let teamDetailView = TeamDetailRouter.createTeamDetailModule(team: team)
         
         if let vc = view as? UIViewController {
             vc.navigationController?.pushViewController(teamDetailView, animated: true)

@@ -10,16 +10,16 @@ import UIKit
 /*/ TeamDetailRouter Protocol */
 
 protocol TeamDetailRouterProtocol {
-    static func createTeamDetailModule() -> UIViewController
+    static func createTeamDetailModule(team: Team) -> UIViewController
 }
 
 /*/ TeamDetailRouter */
 
 class TeamDetailRouter: TeamDetailRouterProtocol {
-    static func createTeamDetailModule() -> UIViewController {
+    static func createTeamDetailModule(team: Team) -> UIViewController {
         let view = TeamDetailView()
         let interactor = TeamDetailInteractor()
-        let presenter: TeamDetailPresenterProtocol & TeamDetailInteractorOutputProtocol = TeamDetailPresenter()
+        let presenter: TeamDetailPresenterProtocol & TeamDetailInteractorOutputProtocol = TeamDetailPresenter(team: team)
         let router = TeamDetailRouter()
         
         interactor.presenter = presenter
